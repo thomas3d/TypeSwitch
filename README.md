@@ -29,3 +29,14 @@ public class TypeSwitch
 Thanks to Christopher from Autodesk (http://stackoverflow.com/users/184528/cdiggins)
 Thanks to Stackoverflow
 Thanks to Google
+
+My own style: (se file TypeSwitch.cs)
+```
+public class TypeSwitch
+{
+    Dictionary<Type, Func<object, object>> matches = new Dictionary<Type, Func<object, object>>();
+    public TypeSwitch Case<T>(Func<T, T> func) { matches.Add(typeof(T), (x) => func((T)x)); return this; }
+    public TypeSwitch Default<T>(Func<T, T> func) { matches.Add(typeof(object), (x) => func((T)x)); return this; }
+    public object Switch(object x) { return matches[x.GetType()](x); }
+}
+```
