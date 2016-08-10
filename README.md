@@ -1,6 +1,7 @@
 # TypeSwitch
 
 I got the idea here:
+
 http://stackoverflow.com/questions/7252186/switch-case-on-type-c-sharp/7301514#7301514
 
 ```
@@ -27,8 +28,11 @@ public class TypeSwitch
 ```
 
 Thanks to Christopher from Autodesk (http://stackoverflow.com/users/184528/cdiggins)
+
 Thanks to Stackoverflow
+
 Thanks to Google
+
 
 My own style: (se file TypeSwitch.cs)
 ```
